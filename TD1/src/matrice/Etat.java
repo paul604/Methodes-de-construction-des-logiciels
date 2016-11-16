@@ -8,6 +8,9 @@ package matrice;
 public enum Etat {
 	
 	E0("E0"),
+	E1("E1"),
+	E2("E2"),
+	E3("E3"),
 	H1("H1"),
 	H2("H2"),
 	H("H"),
