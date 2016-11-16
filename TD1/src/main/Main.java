@@ -11,22 +11,29 @@ import matrice.Matrice;
 public class Main {
 	
 	public static void main(String... args) throws InterruptedException {
-		long sleep = (long) 10;
 		//I 5)
 		System.out.println("-- exo 1 q°5 --");
 		Test.test(Matrice.M1, "10:01");
-		Thread.sleep(sleep);
 		System.out.println("--");
-		Test.test(Matrice.M1, "0 :00");
-		Thread.sleep(sleep);
+		Test.test(Matrice.M1, "50:00");
 		
 		//II 4)
-		System.out.println("-- exo 1 q°5 --");
+		System.out.println("-- exo 2 q°5 --");
 		Test.test(Matrice.M2, ":-)");
-		Thread.sleep(sleep);
 		System.out.println("--");
 		Test.test(Matrice.M2, ";=)");
-		Thread.sleep(sleep);
+
+		//III 2)
+		System.out.println("-- exo 3 q°2 --");
+		Test.test(Matrice.M3, "10/01/2016");
+		System.out.println("--");
+		Test.test(Matrice.M3, "61/02/2016");
+
+		//II 2)
+		System.out.println("-- exo exo 3 q°2 --");
+		Test.test(Matrice.M4, "10:01:59");
+		System.out.println("--");
+		Test.test(Matrice.M4, "10:20:80");
 	}
 
 }

@@ -1,0 +1,17 @@
+I) 3) et II) 3)
+Etatc <- E0
+fin <- false
+while Etatc =/= M ^ !fin do
+	lire carCourant
+	afficher carCourant
+	if Etatc = δ(Etatc, carCourant) then
+		fin <- true
+	else
+		Etatc <- δ(Etatc, carCourant)
+	end
+end
+if Etatc = Ef then
+	afficher ok
+else
+	afficher erreur
+end if

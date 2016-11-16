@@ -23,7 +23,7 @@ public class Test {
 		if(etatCourant == Etat.FIN){
 			System.out.println(text+" ok");
 		}else{
-			System.err.println(text+" erreur");
+			System.out.println(text+" erreur");
 		}
 	}
 }

@@ -20,6 +20,7 @@ public enum Etat {
 	J4("j4"),
 	J30("j30"),
 	J31("j31"),
+	M("m"),
 	M1("M1"),
 	M10("M10"),
 	M11("M11"),
@@ -34,6 +35,8 @@ public enum Etat {
 	A2("A2"),
 	A3("A3"),
 	A4("A4"),
+	S1("s1"),
+	S2("s2"),
 	FIN("Fin"),
 	ERREUR("ERREUR");
 	
