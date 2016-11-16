@@ -131,12 +131,137 @@ public enum Matrice {
 		}
     	
     },
+	//jj/mm/aaaa
     M3("exo3",Etat.E0,new HashMap<String, HashMap<Etat, Etat>>()){
 
 		@Override
 		public void creeat() {
-			// TODO Auto-generated method stub
-			
+
+            //c1
+            HashMap<Etat, Etat> c1 = new HashMap<>();
+            c1.put(Etat.E0, Etat.J1);
+            c1.put(Etat.J2, Etat.J4);
+            c1.put(Etat.J3, Etat.J30);
+            c1.put(Etat.M1, Etat.M2);
+            c1.put(Etat.M10, Etat.M6);
+            c1.put(Etat.M11, Etat.M4);
+            c1.put(Etat.A1, Etat.A2);
+            c1.put(Etat.A2, Etat.A3);
+            c1.put(Etat.A3, Etat.A4);
+            c1.put(Etat.A4, Etat.FIN);
+            for (Etat t: new Etat[]{Etat.J1,Etat.J30,Etat.J31,Etat.J4,Etat.M4,Etat.M6,Etat.M8}) {
+                c1.put(t, Etat.ERREUR);
+            }
+            for (Etat t: new Etat[]{Etat.M2,Etat.M3,Etat.M5,Etat.M7}) {
+                c1.put(t, Etat.M8);
+            }
+            this.mat.put("0",c1);
+
+            //C2
+            HashMap<Etat, Etat> c2 = new HashMap<>();
+            c2.put(Etat.E0, Etat.J2);
+            c2.put(Etat.J1, Etat.J4);
+            c2.put(Etat.J2, Etat.J4);
+            c2.put(Etat.J3, Etat.J31);
+            c2.put(Etat.M1, Etat.M3);
+            c2.put(Etat.M10, Etat.M7);
+            c2.put(Etat.M11, Etat.M5);
+            c2.put(Etat.A1, Etat.A2);
+            c2.put(Etat.A2, Etat.A3);
+            c2.put(Etat.A3, Etat.A4);
+            c2.put(Etat.A4, Etat.FIN);
+            for (Etat t: new Etat[]{Etat.J30,Etat.J31,Etat.J4,Etat.M5,Etat.M8}) {
+                c2.put(t, Etat.ERREUR);
+            }
+            for (Etat t: new Etat[]{Etat.M2,Etat.M3,Etat.M4,Etat.M7,Etat.M6}) {
+                c2.put(t, Etat.M8);
+            }
+            this.mat.put("1",c2);
+
+            //C3
+            HashMap<Etat, Etat> c3 = new HashMap<>();
+            c3.put(Etat.E0, Etat.J2);
+            c3.put(Etat.J1, Etat.J4);
+            c3.put(Etat.J2, Etat.J4);
+            c3.put(Etat.A1, Etat.A2);
+            c3.put(Etat.A2, Etat.A3);
+            c3.put(Etat.A3, Etat.A4);
+            c3.put(Etat.A4, Etat.FIN);
+            for (Etat t: new Etat[]{Etat.J3,Etat.J30,Etat.J31,Etat.J4,Etat.M1,Etat.M10,Etat.M11,Etat.M8,Etat.M4,Etat.M6}) {
+                c3.put(t, Etat.ERREUR);
+            }
+            for (Etat t: new Etat[]{Etat.M2,Etat.M3,Etat.M7,Etat.M5}) {
+                c3.put(t, Etat.M8);
+            }
+            this.mat.put("2",c3);
+
+            //C4
+            HashMap<Etat, Etat> c4 = new HashMap<>();
+            c4.put(Etat.E0, Etat.J3);
+            c4.put(Etat.J1, Etat.J4);
+            c4.put(Etat.J2, Etat.J4);
+            c4.put(Etat.A1, Etat.A2);
+            c4.put(Etat.A2, Etat.A3);
+            c4.put(Etat.A3, Etat.A4);
+            c4.put(Etat.A4, Etat.FIN);
+            for (Etat t: new Etat[]{Etat.J3,Etat.J30,Etat.J31,Etat.J4,Etat.M1,Etat.M10,Etat.M11,Etat.M8,Etat.M3,Etat.M5,Etat.M7}) {
+                c4.put(t, Etat.ERREUR);
+            }
+            for (Etat t: new Etat[]{Etat.M2,Etat.M4,Etat.M6}) {
+                c4.put(t, Etat.M8);
+            }
+            this.mat.put("3",c4);
+
+            //C5 c7 c10
+            HashMap<Etat, Etat> c5 = new HashMap<>();
+            c2.put(Etat.J1, Etat.J4);
+            c2.put(Etat.J2, Etat.J4);
+            c2.put(Etat.A1, Etat.A2);
+            c2.put(Etat.A2, Etat.A3);
+            c2.put(Etat.A3, Etat.A4);
+            c5.put(Etat.A4, Etat.FIN);
+            for (Etat t: new Etat[]{Etat.J3,Etat.J30,Etat.J31,Etat.J4,Etat.M1,Etat.M10,Etat.M11,Etat.M8,Etat.M3,Etat.M5,Etat.M7,Etat.E0,Etat.M4}) {
+                c5.put(t, Etat.ERREUR);
+            }
+            for (Etat t: new Etat[]{Etat.M2,Etat.M6}) {
+                c5.put(t, Etat.M8);
+            }
+            this.mat.put("4",c5);
+            this.mat.put("6",c5);
+            this.mat.put("9",c5);
+
+            //C6 c8 c9
+            HashMap<Etat, Etat> c6 = new HashMap<>();
+            c6.put(Etat.J1, Etat.J4);
+            c6.put(Etat.J2, Etat.J4);
+            c6.put(Etat.A1, Etat.A2);
+            c6.put(Etat.A2, Etat.A3);
+            c6.put(Etat.A3, Etat.A4);
+            c6.put(Etat.A4, Etat.FIN);
+            for (Etat t: new Etat[]{Etat.J3,Etat.J30,Etat.J31,Etat.J4,Etat.M1,Etat.M10,Etat.M11,Etat.M8,Etat.M3,Etat.M5,Etat.M7,Etat.E0}) {
+                c6.put(t, Etat.ERREUR);
+            }
+            for (Etat t: new Etat[]{Etat.M2,Etat.M6,Etat.M4}) {
+                c6.put(t, Etat.M8);
+            }
+            this.mat.put("5",c6);
+            this.mat.put("7",c6);
+            this.mat.put("8",c6);
+
+            //C11
+            HashMap<Etat, Etat> c11 = new HashMap<>();
+            c11.put(Etat.J30, Etat.M10);
+            c11.put(Etat.J31, Etat.M11);
+            c11.put(Etat.J4, Etat.M1);
+            c11.put(Etat.M8, Etat.A1);
+
+            c11.put(Etat.A3, Etat.A4);
+            c11.put(Etat.A4, Etat.FIN);
+            for (Etat t: new Etat[]{Etat.M6,Etat.M2,Etat.J3,Etat.M1,Etat.M10,Etat.M11,Etat.M3,Etat.M5,Etat.M7,Etat.E0,Etat.J1,
+                    Etat.J2,Etat.M4,Etat.A1,Etat.A2,Etat.A3,Etat.A4}) {
+                c11.put(t, Etat.ERREUR);
+            }
+            this.mat.put("/",c11);
 		}
     	
     }
