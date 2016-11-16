@@ -1,7 +1,5 @@
 package main;
 
-import java.awt.Color;
-
 import matrice.Etat;
 import matrice.Matrice;
 
@@ -12,8 +10,8 @@ import matrice.Matrice;
  */
 public class Test {
 
-	public static void test(Matrice m, Etat init, String text){
-		Etat etatCourant = init;
+	public static void test(Matrice m, String text){
+		Etat etatCourant = m.getFirstEtat();
 		int i =0;
 		while (etatCourant != Etat.FIN && etatCourant!= Etat.ERREUR) {
 			if (i>=text.length()) {break;}
