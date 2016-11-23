@@ -34,6 +34,15 @@ public class Main {
 		Test.test(Matrice.M4, "10:01:59");
 		System.out.println("--");
 		Test.test(Matrice.M4, "10:20:80");
+		
+		
+
+		ArrayList<String> a = new ArrayList<>();
+		String[] s = "a b c d e f g h i j k l m n o p q r s t u v w x y z . @".split(" ");
+
+        a.addAll(Arrays.stream(s).collect(Collectors.toList()));
+
+        System.out.println(a);
 	}
 
 }
