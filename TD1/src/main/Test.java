@@ -16,14 +16,15 @@ public class Test {
 		while (etatCourant != Etat.FIN && etatCourant!= Etat.ERREUR) {
 			if (i>=text.length()) {break;}
 			char c = text.charAt(i);
-			System.out.println(etatCourant+" "+c);
-			etatCourant = m.get(c+"", etatCourant);
+			Etat etatNext = m.get(c+"", etatCourant);
+			System.out.println(etatCourant+" "+c+" "+etatNext);
+			etatCourant = etatNext;
 			i++;
 		}
-		if(etatCourant == Etat.FIN){
-			System.out.println(text+" ok");
-		}else{
+		if(etatCourant == Etat.ERREUR){
 			System.out.println(text+" erreur");
+		}else{
+			System.out.println(text+" ok");
 		}
 	}
 }
