@@ -1,7 +1,11 @@
 package matrice;
 
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /**
  * Created by paul on 15/11/2016.
@@ -355,6 +359,63 @@ public enum Matrice {
             this.mat.put(":",c11);
         }
 
+    },
+    M5("exo 4",Etat.E0,new HashMap<String, HashMap<Etat, Etat>>()){
+        //ArrayList<String> a = new ArrayList<>();
+
+        @Override
+        public void creeat() {
+            String[] s = "a b c d e f g h i j k l m n o p q r s t u v w x y z 0 1 2 3 4 5 6 7 8 9 . @".split(" ");
+
+          //  a.addAll(Arrays.stream(s).collect(Collectors.toList()));
+
+            //System.out.println(a);
+
+            //C1 a à z
+            for (String e:s){
+                if(!e.equals("@") || !e.equals(".")){
+                    HashMap<Etat, Etat> c1 = new HashMap<>();
+                    c1.put(Etat.E0, Etat.E1);
+                    c1.put(Etat.E1, Etat.E1);
+                    c1.put(Etat.E2, Etat.E3);
+                    c1.put(Etat.E3, Etat.E3);
+                    c1.put(Etat.E4, Etat.E5);
+                    c1.put(Etat.E5, Etat.E5);
+                    this.mat.put(e,c1);
+                }
+            }
+
+            //C2 .
+            HashMap<Etat, Etat> c2 = new HashMap<>();
+            c2.put(Etat.E0, Etat.ERREUR);
+            c2.put(Etat.E1, Etat.E2);
+            c2.put(Etat.E2, Etat.ERREUR);
+            c2.put(Etat.E3, Etat.ERREUR);
+            c2.put(Etat.E4, Etat.ERREUR);
+            c2.put(Etat.E5, Etat.ERREUR);
+            this.mat.put(".",c2);
+
+            //C3 @
+            HashMap<Etat, Etat> c3 = new HashMap<>();
+            c3.put(Etat.E0, Etat.ERREUR);
+            c3.put(Etat.E1, Etat.E4);
+            c3.put(Etat.E2, Etat.ERREUR);
+            c3.put(Etat.E3, Etat.E4);
+            c3.put(Etat.E4, Etat.ERREUR);
+            c3.put(Etat.E5, Etat.ERREUR);
+            this.mat.put("@",c3);
+
+            //C4 ;
+            HashMap<Etat, Etat> c4 = new HashMap<>();
+            c4.put(Etat.E0, Etat.ERREUR);
+            c4.put(Etat.E1, Etat.ERREUR);
+            c4.put(Etat.E2, Etat.ERREUR);
+            c4.put(Etat.E3, Etat.ERREUR);
+            c4.put(Etat.E4, Etat.ERREUR);
+            c4.put(Etat.E5, Etat.E0);
+            this.mat.put(";",c4);
+
+        }
     };
 
     private final String nom;
@@ -375,6 +436,7 @@ public enum Matrice {
     }
 
     public final Etat get(String x, Etat y){
+        x=x.toLowerCase();
     	if(this.mat.containsKey(x)){
         	HashMap<Etat, Etat> val = this.mat.get(x);
     		if(val.containsKey(y)){
