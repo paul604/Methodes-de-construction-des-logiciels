@@ -1,4 +1,3 @@
-
 package matrice;
 
 import java.util.HashMap;
@@ -8,51 +7,51 @@ import java.util.HashMap;
  */
 public class MatriceC {
 
-    private HashMap<String, HashMap<Etat, Etat>> mat;
-    private Etat etatDep;
-    private Etat etatFin;
+    private HashMap<String, HashMap<EtatC, EtatC>> mat;
+    private EtatC etatDep;
+    private EtatC etatFin;
 
     //construct
     public MatriceC() {
         this.mat = new HashMap<>();
     }
 
-    public Etat getEtatDep() {
+    public EtatC getEtatDep() {
         return etatDep;
     }
 
-    protected void setEtatDep(Etat etatDep) {
+    protected void setEtatDep(EtatC etatDep) {
         this.etatDep = etatDep;
     }
 
-    public Etat getEtatFin() {
+    public EtatC getEtatFin() {
         return etatFin;
     }
 
-    protected void setEtatFin(Etat etatFin) {
+    protected void setEtatFin(EtatC etatFin) {
         this.etatFin = etatFin;
     }
 
-    public void add(Etat dep, String key, Etat dest){
+    public void add(EtatC dep, String key, EtatC dest){
         key=key.toLowerCase();
         if(!this.mat.containsKey(key)){
-            HashMap<Etat,Etat> tmp = new HashMap<>();
+            HashMap<EtatC,EtatC> tmp = new HashMap<>();
             tmp.put(dep,dest);
             this.mat.put(key,tmp) ;
         }else{
-            HashMap<Etat,Etat> tmp = this.mat.get(key);
+            HashMap<EtatC,EtatC> tmp = this.mat.get(key);
             tmp.put(dep,dest);
         }
     }
 
-    public Etat get(String x, Etat y){
+    public EtatC get(String x, EtatC y){
         x=x.toLowerCase();
         if(this.mat.containsKey(x)){
-            HashMap<Etat, Etat> val = this.mat.get(x);
+            HashMap<EtatC, EtatC> val = this.mat.get(x);
             if(val.containsKey(y)){
                 return val.get(y);
             }
         }
-        return Etat.ERREUR;
+        return new EtatC("Erreur");
     }
 }
