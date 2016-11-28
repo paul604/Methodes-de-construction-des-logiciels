@@ -1,8 +1,11 @@
 package main;
 
 import matrice.Etat;
+import matrice.EtatC;
 import matrice.Matrice;
+import matrice.train;
 
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.stream.Collectors;
@@ -14,7 +17,7 @@ import java.util.stream.Collectors;
  */
 public class Main {
 	
-	public static void main(String... args) throws InterruptedException {
+	public static void main(String... args) throws InterruptedException, FileNotFoundException {
 		//I 5)
 		/*System.out.println("-- exo 1 q°5 --");
 		Test.test(Matrice.M1, "10:01");
@@ -32,7 +35,7 @@ public class Main {
 		Test.test(Matrice.M3, "10/01/2016");
 		System.out.println("--");
 		Test.test(Matrice.M3, "61/02/2016");
-*/
+
 		//II 2)
 		System.out.println("-- exo exo 3 q°2 --");
 		Test.test(Matrice.M4, "10:01:59");
@@ -41,9 +44,13 @@ public class Main {
 
         //IV 4)
         System.out.println("-- exo 4  q°4 --");
-        Test.test(Matrice.M5, "a.B@e;ab@e");
+        Test.test(Matrice.M5, "a.B@e;a.b@e");
         System.out.println("--");
-        Test.test(Matrice.M5, "eA@e");
+        Test.test(Matrice.M5, "e.A@e;a.##@e");
+*/
+
+        System.out.println(train.addFil("data/test").get(",",new EtatC("e1")).getName());
+
     }
 
 }
