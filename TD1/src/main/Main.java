@@ -32,18 +32,18 @@ public class Main {
 		Test.test(Matrice.M3, "10/01/2016");
 		System.out.println("--");
 		Test.test(Matrice.M3, "61/02/2016");
-
+*/
 		//II 2)
 		System.out.println("-- exo exo 3 q°2 --");
 		Test.test(Matrice.M4, "10:01:59");
 		System.out.println("--");
-		Test.test(Matrice.M4, "10:20:80");
-*/
+		Test.test(Matrice.M4, "10:20:105");
+
         //IV 4)
         System.out.println("-- exo 4  q°4 --");
         Test.test(Matrice.M5, "a.B@e;ab@e");
         System.out.println("--");
-        Test.test(Matrice.M5, "ab.@er");
+        Test.test(Matrice.M5, "eA@e");
     }
 
 }
