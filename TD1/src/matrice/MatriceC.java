@@ -4,7 +4,7 @@ package matrice;
 import java.util.HashMap;
 
 /**
- * Created by E155441H on 28/11/16.
+ * Created by paul on 28/11/16.
  */
 public class MatriceC {
 
