@@ -415,6 +415,16 @@ public enum Matrice {
             c4.put(Etat.E5, Etat.E0);
             this.mat.put(";",c4);
 
+            //C5 ""
+            HashMap<Etat, Etat> c5 = new HashMap<>();
+            c5.put(Etat.E0, Etat.ERREUR);
+            c5.put(Etat.E1, Etat.ERREUR);
+            c5.put(Etat.E2, Etat.ERREUR);
+            c5.put(Etat.E3, Etat.ERREUR);
+            c5.put(Etat.E4, Etat.ERREUR);
+            c5.put(Etat.E5, Etat.FIN);
+            this.mat.put("",c5);
+
         }
     };
 
