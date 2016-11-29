@@ -5,7 +5,7 @@ import java.util.HashMap;
 /**
  * Created by paul on 28/11/16.
  */
-public class MatriceC {
+public class MatriceC implements IMatrice{
 
     private HashMap<String, HashMap<EtatC, EtatC>> mat;
     private EtatC etatDep;
@@ -16,19 +16,23 @@ public class MatriceC {
         this.mat = new HashMap<>();
     }
 
+    @Override
     public EtatC getEtatDep() {
         return etatDep;
     }
 
-    protected void setEtatDep(EtatC etatDep) {
+    @Override
+    public void setEtatDep(EtatC etatDep) {
         this.etatDep = etatDep;
     }
 
+    @Override
     public EtatC getEtatFin() {
         return etatFin;
     }
 
-    protected void setEtatFin(EtatC etatFin) {
+    @Override
+    public void setEtatFin(EtatC etatFin) {
         this.etatFin = etatFin;
     }
 
