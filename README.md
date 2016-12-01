@@ -1,5 +1,5 @@
 # Methodes-de-construction-des-logiciels
-Module M3301-2  du DUT Informatique
+Module M3301-2  du DUT Informatique à l'IUT de Nantes
 
 # LICENSE
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
