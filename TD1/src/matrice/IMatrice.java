@@ -11,19 +11,25 @@ public interface IMatrice {
     EtatC etatDep=null;
     EtatC etatFin = null;
 
-    default EtatC getEtatDep() {
-        return etatDep;
+    default EtatC getEtatDep(){
+        throw new UnsupportedOperationException();
     }
 
-    default void setEtatDep(EtatC etatDep) {
-        etatDep = etatDep;
+    void setEtatDep(EtatC etatDep);
+
+    EtatC getEtatFin();
+
+    void setEtatFin(EtatC etatFin);
+
+    default void add(EtatC dep, String key, EtatC dest){
+        throw new UnsupportedOperationException();
     }
 
-    default EtatC getEtatFin() {
-        return etatFin;
+    default void add(EtatC dep, String key, String out, EtatC dest){
+        throw new UnsupportedOperationException();
     }
 
-    default void setEtatFin(EtatC etatFin) {
-        etatFin = etatFin;
+    default Object[] get(String x, EtatC y){
+        throw new UnsupportedOperationException();
     }
 }

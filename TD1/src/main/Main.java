@@ -49,7 +49,8 @@ public class Main {
         Test.test(Matrice.M5, "e.A@e;a.##@e");
 */
 
-        System.out.println(train.addFil("data/test").get(",",new EtatC("e1")).getName());
+        //System.out.println(train.addFil("data/test.matrice").get("int",new EtatC("e0"))[1]);
+        Test.test(train.addFil("data/test.matrice"),"",true);
 
     }
 

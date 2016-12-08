@@ -36,6 +36,7 @@ public class MatriceC implements IMatrice{
         this.etatFin = etatFin;
     }
 
+    @Override
     public void add(EtatC dep, String key, EtatC dest){
         key=key.toLowerCase();
         if(!this.mat.containsKey(key)){
@@ -48,14 +49,14 @@ public class MatriceC implements IMatrice{
         }
     }
 
-    public EtatC get(String x, EtatC y){
+    public Object[] get(String x, EtatC y){
         x=x.toLowerCase();
         if(this.mat.containsKey(x)){
             HashMap<EtatC, EtatC> val = this.mat.get(x);
             if(val.containsKey(y)){
-                return val.get(y);
+                return new Object[]{val.get(y)};
             }
         }
-        return new EtatC("Erreur");
+        return new Object[]{new EtatC("Erreur")};
     }
 }

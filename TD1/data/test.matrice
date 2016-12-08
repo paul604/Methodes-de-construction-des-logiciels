@@ -1,23 +1,9 @@
+mealy
+
 first/-/e0
-e0/-/az/-/e1
-e0/-/09/-/e1
+e0/-/open/-/login/-/e1
 
-e1/-/az/-/e1
-e1/-/09/-/e1
-e1/-/./-/e2
-e1/-/@/-/e4
-
-e2/-/az/-/e3
-e2/-/09/-/e3
-
-e3/-/az/-/e3
-e3/-/09/-/e3
-e3/-/@/-/e4
-
-e4/-/az/-/e5
-e4/-/09/-/e5
-
-e5/-/az/-/e5
-e5/-/09/-/e5
-e5/-/;/-/e0
-e5/-//-/fin
+e1/-/ls/-/liste des fichier/-/e1
+e1/-/get/-/get un fichier/-/e1
+e1/-/put/-/put un fichier/-/e1
+e1/-/close/-/déconnection/-/e0
